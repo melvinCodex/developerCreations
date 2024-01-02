@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balliston Online Shop</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <nav>
+        <div class="site-title">
+            <a href="/">Balliston</a>
+            <p>Balliston.com website</p>
+        </div>
+        <ul>
+            <li><a href="/">Blogs</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blogs/create">New Blog</a></li>
+        </ul>
+    </nav>
+    <div class="card">
+        <div class="cont">
+            <h2><%= image.title %></h2>
+            <% const url = '/images/' + image.imageUrl + '.jpg'; %>
+            <% console.log(url)%>
+            <img src="<%=url%>" alt="<%= image.title %>"/>
+            <span class="delete" data-doc="<%= image._id %>">Delete</span>
+        </div>
+    </div>
+    <script>
+        const deleteImg = document.querySelector('.delete');
+
+        deleteImg.addEventListener('click', (e) => {
+            const endpoint = `/blogs/${deleteImg.dataset.doc}`;
+
+            fetch(endpoint, {
+                method: 'DELETE'
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                window.location.href = data.redirect; 
+            })
+            .catch(err => console.log(err));
+        })
+    </script>
+ 
+
+</body>
+</html>

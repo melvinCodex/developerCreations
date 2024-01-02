@@ -18,8 +18,21 @@
             <li><a href="/blogs/create">New Blog</a></li>
         </ul>
     </nav>
-    <div class="not-found content">
-        oops! , Page not found :)
-    </div>
+    <section class="blogs">
+        <ul>
+            <% images.forEach(image => { %>
+                <li>
+                  <a class="single" href="/gallery/<%= image._id %>">
+                    <% const url = '/images/' + image.imageUrl + '.jpg'; %>
+                    <div class="img-con">
+                        <h2><%= image.title %></h2>
+                        <img src="<%= url %>" alt="<%= image.title %>" />  
+                    </div>
+                  </a>
+                </li>
+            <% }); %>
+        </ul>
+    </section>
+    
 </body>
 </html>

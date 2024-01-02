@@ -18,8 +18,14 @@
             <li><a href="/blogs/create">New Blog</a></li>
         </ul>
     </nav>
-    <div class="not-found content">
-        oops! , Page not found :)
+    <div class="create-blog content">
+        <form action="/blogs/create"  method="post">
+            <label for="title">Image title</label>
+            <input type="text" id="title" placeholder="Enter image title" name="title" required>
+            <label for="imageUrl">Image Url</label>
+            <input type="text" id="imageUrl" placeholder="Enter image name" name="imageUrl" required>
+            <button>Submit</button>
+        </form>
     </div>
 </body>
 </html>
