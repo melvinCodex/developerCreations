@@ -31,7 +31,6 @@
 }
 body{
     font-family: "Poppins",sans-serif;
-    touch-action: none;
 }
 .danger{
     color: var(--color-danger);
@@ -462,10 +461,10 @@ section .show-animate{
     border-radius: 5px;
     line-height: 1.4rem;
     margin-bottom: 1.5rem;
-    transition: all 500ms ease;
+    transition: all 300ms ease;
 }
 .services .container.animate{
-    transform: translateX(60%);
+    transform: translateX(40%);
     opacity: 0;
 }
 .services .container.show-animate{

@@ -13,6 +13,10 @@
     }
     nav .links{
         display: none;
+        position: absolute;
+        top: 3rem;
+        left: 80%;
+        width: 30%;
     }
     nav .links li {
         animation: animateNavItems 400ms linear forwards;
