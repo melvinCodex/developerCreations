@@ -140,7 +140,7 @@
         flex-direction: column;
     }
     .portifolio .container .slider{
-        max-width: 87%;
+        max-width: 100%;
     }
     .portifolio .container .project:hover .slider{
         transform: translateY(-5.5rem);

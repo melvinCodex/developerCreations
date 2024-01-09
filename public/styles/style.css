@@ -139,10 +139,11 @@ nav .button span{
 }
 .banner .left img{
     border-radius: 30%;
-    min-width: 70%;
+    max-width: 75%;
     transition: all 400ms ease;
     animation: animateImage 1000ms ease-in-out forwards;
     filter: blur(1);
+    aspect-ratio: 1/1;
 }
 .banner .left img:hover{
     scale: 1.1;
@@ -403,6 +404,9 @@ nav .button span{
 .about .right img{
     transition: all 700ms ease-in;
     border-radius: 30%;
+    max-width: 85%;
+    aspect-ratio: 1/1;
+    filter: invert(0);
 }
 .about .right img:hover{
     border-radius: 0;
@@ -583,11 +587,11 @@ section .show-animate{
     z-index: 200;
 }
 .portifolio .container .slider{
-    position: absolute;
+    position: relative;
     color: #000;
     z-index: 1000;
     transition: all 400ms ease;
-    max-width: 29.52%;
+    max-width: 100%;
     opacity: 0;
     padding: 4px;
     border-bottom-right-radius: 8px;
