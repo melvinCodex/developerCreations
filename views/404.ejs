@@ -1,29 +1,30 @@
-<%-include('./partials/header.ejs')%> 
+<%-include('./partials/header.ejs')%>
+
 <nav>
     <div class="logo">
-        <span class="white">PORTIF</span>
+        <span class="white">DEVELOPER</span>
         <img src="images/logo.png" > 
-        <span class="danger">OLIO</span>
+        <span class="danger">CREATIONS</span>
     </div>
 
     <div class="links">
         <ul>
-            <li class="nav-link active"><a  href="/">Home</a></li>
-            <li class="nav-link"><a  href="/about">About</a></li>
-            <li class="nav-link"><a  href="/services">Services</a></li>
-            <li class="nav-link"><a  href="/portifolio">Portifolio</a></li>
-            <li class="nav-link"><a  href="/contact-us">Contact-us</a></li>
+            <li class="nav-link"><a class="active" href="#banner">Home</a></li>
+            <li class="nav-link"><a  href="#about">About</a></li>
+            <li class="nav-link"><a  href="#services">Services</a></li>
+            <li class="nav-link"><a  href="#portifolio">Portifolio</a></li>
+            <li class="nav-link"><a  href="#contact-us">Contacts</a></li>
         </ul>
     </div>
-    <div class="button">
-            <span class="material-symbols-outlined button">menu</span>
-    </div>
+    <span class="material-symbols-outlined button menu">menu</span>
+    <span class="material-symbols-outlined button close">close</span>
+    
 </nav> 
+
+
 <section class="error-pg">
-    <div class="container">
-        <h4>
-            Page not found.
-        </h4>
+    <div class="error-container">
+        <h2>OOOPS! Couldn't find page/item. Page/item might have been moved or deleted.</h2>
     </div>
-</section>    
+</section>
 <%-include('./partials/footer.ejs')%>

@@ -91,7 +91,7 @@ hireLink.addEventListener('click', function(e) {
         if (hireDetails) {
             hireDetails.style.display = 'none';
         }
-        alert('Please fill the following form and click the submit button');
+        alert('Please fill the following form and click the submit button. We will be intouch shortly');
     }
 });
 

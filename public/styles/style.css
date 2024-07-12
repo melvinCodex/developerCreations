@@ -81,31 +81,32 @@ nav .links ul{
     gap: .8rem;
     transform: translateY(1.7rem);
     margin-right: 2.5rem;
+    padding: 0 5px;
 }
 nav .links ul li a{
-    font-size: large;
+    font-size: 16px;
     padding: 2px;
     color: var(--color-white);
     transition: border 5ms ease;
     transition: all 300ms ease;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     border-radius: 2px;
 }
 nav .links ul li a:hover{
     color: var(--color-danger);
 }
 nav .links ul li a.active{
-    border: 3px solid var(--color-success);
-    color: var(--color-success);
-    letter-spacing: 2px;
-    font-weight: 700;
+    border-bottom: 1px double var(--color-danger);
+    color: var(--color-danger);
+    letter-spacing: 0;
+    font-weight: 500;
 }
 nav .links ul li a:last-child.active{
     letter-spacing: 0;
 }
 nav .links ul li a.active:hover{
-    border: 3px solid var(--color-danger);
-    color: var(--color-danger);
+    border-bottom: 1px double var(--color-success);
+    color: var(--color-success);
 }
 
 nav .button{
@@ -131,19 +132,23 @@ nav .button span{
 
 .banner{
     transform: translateY(71.45px);
-    background-color: var(--color-white);
-    box-shadow: inset 0 0 2rem var(--color-black);
+    background-color: #fff;
     height: 89vh;
     display: grid;
     grid-template-columns: 45% 55%;
 }
+.banner .left{
+    background-image:url('/images/logothree.png');
+    background-size: cover;
+    background-position: center;
+}
 .banner .left img{
-    border-radius: 30%;
-    max-width: 75%;
+    display: block;
+    opacity: 0;
+    border-radius: none;
+    max-width: 85%;
     transition: all 400ms ease;
     animation: animateImage 1000ms ease-in-out forwards;
-    filter: blur(1);
-    aspect-ratio: 1/1;
 }
 .banner .left img:hover{
     scale: 1.1;
@@ -158,7 +163,7 @@ nav .button span{
     }
     100%{
         transform: translate(20%, 15%);
-        opacity: 1;
+        opacity: 0;
     }
 }
 .banner .right{
@@ -310,9 +315,11 @@ nav .button span{
     transition: all 700ms ease;
 }
 .about .left h3.animate{
-    transform: translateX(-100%);
+    transform: translateX(-30%);
+    opacity: 0;
 }
 .about .left h3.show-animate{
+    opacity: 1;
     transform: translateX(0);
 }
 .about .left .danger{
@@ -338,14 +345,16 @@ nav .button span{
     font-weight: 200;
     padding: 1rem 0;
     color: burlywood;
+    transition: all 1000ms ease;
+    transition-delay: 200ms;
 }
-.about .left p.animate,
-.about .left span.animate{
-    filter: blur(.1);
+.about .left p.animate{
+    opacity: 0;
+    transform: translateX(-200%);
 }
-.about .left p.show-animate,
-.about .left span.show-animate{
-    filter: blur(1);
+.about .left p.show-animate{
+    opacity: 1;
+    transform: translateX(0);
 }
 .about .left span.success{
     margin-top: 1rem;
@@ -403,8 +412,8 @@ nav .button span{
 }
 .about .right img{
     transition: all 700ms ease-in;
-    border-radius: 30%;
-    max-width: 85%;
+    border-radius: 20%;
+    max-width: 100%;
     aspect-ratio: 1/1;
     filter: invert(0);
 }
@@ -427,19 +436,15 @@ section .animate{
 section .show-animate{
     filter: blur(0);
 }
-@keyframes animateSection{
-    0%{
-    }
-    100%{
-    }
-}
+
+
 
 
 
 .services{
     transform: translateY(13rem);
-    background-color: var(--color-white);
-    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    background-color: #fff;
+
     overflow: hidden;
 }
 .services h2{
@@ -465,10 +470,10 @@ section .show-animate{
     border-radius: 5px;
     line-height: 1.4rem;
     margin-bottom: 1.5rem;
-    transition: all 300ms ease;
+    transition: all 100ms ease;
 }
 .services .container.animate{
-    transform: translateX(40%);
+    transform: translateX(20%);
     opacity: 0;
 }
 .services .container.show-animate{
@@ -611,8 +616,7 @@ section .show-animate{
 
 
 .contact-us{
-    transform: translateY(18rem);  
-    box-shadow:0 0 1rem rgba(0, 0, 0, 0.7); 
+    transform: translateY(18rem);   
 }
 .contact-us h2{
     padding: 0 25%;
@@ -643,11 +647,11 @@ form{
     flex-direction: column;
     transform: translateY(-0.7rem);
     transition: all 800ms ease;
-    background: linear-gradient(45deg, rgba(85, 255, 0, 0.737),rgba(0, 247, 255, 0.482));
+    background: linear-gradient(45deg, rgba(2, 2, 2, 0.737),rgba(39, 36, 36, 0.482));
 }
 form.animate{
-    transform: translateY(100%);
-    scale: .2;
+    transform: translateY(40%);
+    scale: .6;
     opacity: 0;
 }
 form.show-animate{
@@ -664,21 +668,21 @@ form ul li{
 form label{
     display: flex;
     padding: 5px 20px;
-    background: rgba(109, 107, 11, 0.6);
+    background: rgba(255, 254, 192, 0.6);
     color: rgba(3, 34, 43, 0.9);
     font-size: 12px;
     font-weight: 600;
     align-content: center;
 }
 form input{
-    background:linear-gradient(45deg, rgba(200, 0, 200, 0.237),rgba(204, 20, 200, 0.382));
+    background:linear-gradient(45deg, rgba(255, 152, 255, 0.692),rgba(204, 20, 200, 0.382));
     padding-left: 5px;
     color: rgba(31, 53, 38, 0.947);
     margin-left: .5rem;
 }
 input::placeholder{
     font-size: 15px;
-    color: rgba(19, 32, 23, 0.547);
+    color: rgba(51, 51, 51, 0.651);
 }
 form textarea{
     margin-top: .5rem;
@@ -743,7 +747,7 @@ form button:hover{
 }
 .footer .links{
     margin-top: .6rem;
-    padding: 0 30%;
+    padding: 0 25%;
 }
 .footer .links ul{
     display: flex;
@@ -810,10 +814,10 @@ form button:hover{
 
 }
 .footer .but-container a{
-    color: #00bf8e;
+    color: var(--color-danger);
 }
 .footer .but-container a:hover{
-    color: var(--color-danger);
+    color: var(--color-success);
 }
 .footer .but h3{
     transform: translateY(1.8rem);
@@ -887,7 +891,7 @@ form button:hover{
 .details .container .card{
     border: 1px dashed var(--color-primary);
     padding: 10px;
-    height: 50vh;
+    min-height: 55vh;
     box-shadow: 0 0 1rem var(--color-primary);
 }
 .details .container .card:hover{
@@ -907,15 +911,14 @@ form button:hover{
     letter-spacing: 1px;
 }
 .details .container span{
-    position: absolute;
+    position: relative;
     color: #000e4e;
     font-size: .85rem;
-    width: 17%;
-    top: 90%;
+    width: 100%;
 }
 .details .pricing{
     padding: 1.5% 10%;
-    background-color: rgba(240, 240, 240, 0.877);
+    background-color: rgba(255, 255, 255, 0.877);
 }
 .details .pricing > h3{
     margin-left: 40%;
